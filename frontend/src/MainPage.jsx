@@ -9,7 +9,7 @@ const MaingPage = () => {
   const [board, setBoard] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/board/getBoard").then(function (res) {
+    axios.get("http://3.36.69.233:3000/board/getBoard").then(function (res) {
       setBoard(res.data);
     });
   }, []);
