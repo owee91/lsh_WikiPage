@@ -50,7 +50,7 @@ const MaingPage = () => {
             추가
           </button>
         </div>
-        <div style={{ height: "300px" }}>
+        <div style={{ height: "200px" }}>
           <ul style={{ height: "100%", marginTop: "1rem" }}>
             {currentItems.map((el, index) => {
               return (
