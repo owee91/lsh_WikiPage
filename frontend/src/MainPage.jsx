@@ -1,20 +1,26 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-key */
-/* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const MaingPage = () => {
-  const title = [];
+  const [board, setBoard] = useState([]);
 
-  for (let i = 0; i < 100; i++) {
-    title.push({
-      title: "제목" + Number(i + 1),
-      content: "내용물" + Number(i + 1),
+  useEffect(() => {
+    axios.get("http://localhost:3000/board/getBoard").then(function (res) {
+      setBoard(res.data);
     });
-  }
+  }, []);
+
+  let title = [];
+  title = board.map((x) => {
+    return {
+      id: x.id,
+      title: x.title,
+      content: x.content,
+    };
+  });
 
   // 현재 페이지 번호와 페이지 당 항목 수 상태  설정
   const [currentPage, setCurrentPage] = useState(1);
