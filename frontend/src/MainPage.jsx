@@ -15,7 +15,6 @@ const MaingPage = () => {
       content: "내용물" + Number(i + 1),
     });
   }
-  console.log("title", title);
 
   // 현재 페이지 번호와 페이지 당 항목 수 상태  설정
   const [currentPage, setCurrentPage] = useState(1);
