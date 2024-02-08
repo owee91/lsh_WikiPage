@@ -17,7 +17,7 @@ const MaingPage = () => {
   }
   console.log("title", title);
 
-  // 현재 페이지 번호와 페이지 당 항목 수 상태 설정
+  // 현재 페이지 번호와 페이지 당 항목 수 상태  설정
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5; // 페이지 당 항목 수 설정
 
