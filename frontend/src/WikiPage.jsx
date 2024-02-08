@@ -39,7 +39,7 @@ const WikiPage = () => {
         });
     } else {
       axios
-        .post("http://localhost:3000/board/postBoard", {
+        .post("http://3.36.69.233:3000/board/postBoard", {
           title: title,
           content: content,
         })
