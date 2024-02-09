@@ -29,7 +29,7 @@ const WikiPage = () => {
 
     if (flag) {
       axios
-        .put("http://localhost:3000/board/putBoard", {
+        .put("http://3.36.66.225:3000/board/putBoard", {
           id: id,
           title: title,
           content: content,
@@ -39,7 +39,7 @@ const WikiPage = () => {
         });
     } else {
       axios
-        .post("http://localhost:3000/board/postBoard", {
+        .post("http://3.36.66.225:3000/board/postBoard", {
           title: title,
           content: content,
         })
