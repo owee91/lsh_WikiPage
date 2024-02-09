@@ -50,12 +50,12 @@ const MaingPage = () => {
             추가
           </button>
         </div>
-        <div style={{ height: "500px" }}>
+        <div style={{ height: "300px" }}>
           <ul style={{ height: "100%", marginTop: "1rem" }}>
             {currentItems.map((el, index) => {
               return (
                 <div key={index} style={{ width: "100px", height: "50px" }}>
-                  <Link to="/wikiPage" state={{ data: el }}>
+                  <Link to={`/wikiPage`} state={{ data: el, board: board }}>
                     <li>{el.title}</li>
                   </Link>
                 </div>
